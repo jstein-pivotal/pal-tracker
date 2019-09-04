@@ -3,7 +3,7 @@ package io.pivotal.pal.tracker;
 import java.time.LocalDate;
 
 public class TimeEntry {
-    public long id;
+    public long id = 1;
     public long projectId;
     public long userId;
     public LocalDate date;
@@ -41,5 +41,21 @@ public class TimeEntry {
             && other.hours == hours
             && other.id == id
         );
+    }
+
+    public long getProjectId() {
+        return this.projectId;
+    }
+
+    public long getUserId() {
+        return this.userId;
+    }
+
+    public int getHours() {
+        return this.hours;
+    }
+
+    public LocalDate getDate() {
+        return this.date;
     }
 }
